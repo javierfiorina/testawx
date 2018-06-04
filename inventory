@@ -1,0 +1,25 @@
+[backup-server]
+backup01.origin.local
+
+[masters]
+master01.origin.local
+
+[backup-server:vars]
+backup_folder="/media/backup/configs/"
+hostname=["haproxy01.origin.local" , "infra01.origin.local", "infra02.origin.local" ,"ipa01.origin.local" ,"master01.origin.local" ,"master02.origin.local" ,"master03.origin.local" ,"nfs01.origin.local" ,"nfs02.origin.local" ,"nfs03.origin.local" ,"node01.origin.local" ,"node02.origin.local" ,"node03.origin.local" ,"vpn01.origin.local" ,"zabbix01.origin.local"]
+haproxy01.origin.local_backupfolder=[ "/etc/" , "/root/"]
+node01.origin.local_backupfolder=["/etc/" , "/root/"]
+node02.origin.local_backupfolder=["/etc/" , "/root/"]
+node03.origin.local_backupfolder=["/etc/" , "/root/"]
+infra01.origin.local_backupfolder=["/etc/" , "/root/"]
+infra02.origin.local_backupfolder=["/etc/" , "/root/"]
+ipa01.origin.local_backupfolder=["/etc/" , "/root/"]
+master01.origin.local_backupfolder=["/tmp/backup/" , "/etc/" , "/root/"]
+master02.origin.local_backupfolder=["/etc/" , "/root/"]
+master03.origin.local_backupfolder=["/etc/" , "/root/"]
+nfs01.origin.local_backupfolder=["/etc/" , "/root/"]
+nfs02.origin.local_backupfolder=["/etc/" , "/root/"]
+nfs03.origin.local_backupfolder=["/etc/" , "/root/"]
+vpn01.origin.local_backupfolder=["/etc/" , "/root/"]
+zabbix01.origin.local_backupfolder=["/etc/" , "/root/"]
+
