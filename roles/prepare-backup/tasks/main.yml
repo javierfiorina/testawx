@@ -1,0 +1,11 @@
+---
+# tasks file for prepare-backup
+- name: Install rsnapshot if its not installed
+  yum:
+     name: rsnapshot
+     state: present
+
+- name: Copying configuration file 
+  template:
+    src: rsnapshot.conf.j2
+    dest: /etc/rsnapshot.conf

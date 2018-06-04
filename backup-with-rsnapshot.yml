@@ -1,0 +1,13 @@
+##### Rsnapshot Execution
+- name: Prepare master to backup
+  hosts: masters
+  remote_user: root
+  roles:
+    - prepare-master-backup
+
+- name: Execution of rsnapshot
+  hosts: backup-server
+  remote_user: root
+  roles:
+    - prepare-backup
+    - execute-backup
